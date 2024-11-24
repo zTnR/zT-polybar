@@ -15,6 +15,8 @@ Copy ```zT-polybar-dock``` or ```zT-polybar-pane``` folder in ```~/.config/polyb
 
 Launch with ```/launch.sh```
 
+Install ```Rofi``` for the menus.
+
 # Mouse buttons
 
 ```
@@ -73,6 +75,27 @@ type=custom/text
 content = [Icon]
 click-left = ~/.config/polybar/zT-polybar-dock/scripts/rofi-bluetooth
 click-right = blueman-manager
+```
+
+### Power menu
+
+Uses some Xfce4 commands, modify in ```/scripts/powermenu.sh```
+
+```
+case $chosen in
+    "󰐥")
+        systemctl poweroff
+        ;;
+    "󰜉")
+        xfce4-session-logout --reboot
+        ;;
+    "󰍁")
+        xfce4-session-logout --logout
+        ;;
+    "")
+        xfce4-session-logout
+        ;;
+esac
 ```
 
 ### Fonts and Colors
