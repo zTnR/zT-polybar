@@ -15,7 +15,7 @@ launch_bar() {
 
 	# Launch the bar
 	polybar -q main -c "$dir/config.ini" &
-	polybar -q tray -c "$dir/config.ini" &
+	#polybar -q tray -c "$dir/config.ini" &
 
 	# xdo show/hide workaround for FS on top
 	#sleep 0.2
