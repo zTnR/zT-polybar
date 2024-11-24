@@ -1,0 +1,109 @@
+
+
+configuration {
+    hover-select:				true;
+    show-icons:                 false;
+}
+
+@import "shared.rasi"
+
+window {
+    transparency:                "real";
+    location:                    northwest;
+    anchor:                      northwest;
+    fullscreen:                  false;
+    width:                       15%;
+    height:                      95%;
+    x-offset:                    0%;
+    y-offset:                    @yOffset;
+    padding: 					 0px 0px 0px 50px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               25px;
+    border-color:                @selected;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+mainbox {
+    enabled:                     true;
+    border-radius:               25px;
+    border-color:                @selected;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    background-color:            @background;
+    text-color:                  @foreground;
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     10px 10px;
+    orientation:                 horizontal;
+    children:                    [ "entry" ];
+}
+
+entry {
+    font:                        "Fantasque Sans Mono 19";
+    enabled:                     true;
+    expand:                      true;
+    padding:                     12px 12px;
+    border-radius:               25px;
+    background-color:            @background;
+    text-color:                  @foreground;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    border-radius:               25px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    padding:                     8px;
+    border-radius:               25px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        24px;
+    cursor:                      inherit;
+}
+
+element-text {
+    font:                        "Fantasque Sans Mono 19";
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}

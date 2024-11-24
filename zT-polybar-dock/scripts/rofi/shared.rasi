@@ -1,0 +1,8 @@
+
+* {
+    font: "Fantasque Sans Mono 9";
+    background: #1F1F1F;
+    foreground: #808080;
+    selected: #2f9b85;
+    yOffset: 75px;
+}

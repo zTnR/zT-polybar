@@ -1,0 +1,69 @@
+
+configuration {
+	hover-select:				true;
+	me-select-entry:			"";
+	me-accept-entry:			"MousePrimary";
+}
+
+@import "shared.rasi"
+
+window {
+    transparency:                "real";
+    location:                    northeast;
+    anchor:                      northeast;
+    fullscreen:                  false;
+    width:                       10%;
+    x-offset:                    -50px;
+    y-offset:                    @yOffset;
+    background-color:            @background;
+    border-radius: 				 25px;
+}
+
+mainbox {
+    enabled:                     true;
+    background-color:            @background;
+    children:                    [ "listview" ];
+}
+
+inputbar { enabled : false; }
+textbox-prompt-colon { enabled : false; }
+prompt { enabled : false; }
+message { enabled : false; }
+
+listview {
+    enabled:                     true;
+    columns:                     4;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    background-color:            @background;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+element-text {
+    font:                        "Material Design Icons Desktop 20";
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}

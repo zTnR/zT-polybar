@@ -1,0 +1,91 @@
+// # z0mbi3 -  https://github.com/gh0stzk/dotfiles
+
+configuration {
+    hover-select:				true;
+    show-icons:                 false;
+}
+
+@import "shared.rasi"
+
+window {
+    transparency:                "real";
+    location:                    north;
+    anchor:                      north;
+    fullscreen:                  false;
+    width:                       10%;
+    height:                      25%;
+    x-offset:                    44%;
+    y-offset:                    @yOffset;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               25px;
+    border-color:                @selected;
+    cursor:                      "default";
+    background-color:            @background;
+    }
+
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     15px;
+    border-color:                @selected;
+    background-color:            transparent;
+    children:                    [ "listview" ];
+}
+
+inputbar { enabled : false; }
+textbox-prompt-colon { enabled : false; }
+prompt { enabled : false; }
+message { enabled : false; }
+entry { enabled : false; }
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    padding:                     8px;
+    border-radius:               25px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        24px;
+    cursor:                      inherit;
+}
+
+element-text {
+    font:                        "Fantasque Sans Mono 19";
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
